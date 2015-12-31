@@ -92,7 +92,7 @@ object KafkaStreamingTest{
                     case _ => false
                 }
             ).collect
-            db_daemon.execute("select shoporderid, userid from haodou_shop.ShopOrder where ShopOrderId in (%s);".format(ret.map(_.get._4.getString("order_id")).mkString(",")))
+            //db_daemon.execute("select shoporderid, userid from haodou_shop.ShopOrder where ShopOrderId in (%s);".format(ret.map(_.get._4.getString("order_id")).mkString(",")))
         })
 
         //                db_daemon.put((config._1, x._1, x._2))
