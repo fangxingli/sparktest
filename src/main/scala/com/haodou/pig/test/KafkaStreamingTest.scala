@@ -44,9 +44,9 @@ object KafkaStreamingTest{
         val topicMap = topics.split(",").map((_, numThreads.toInt)).toMap
 
         // 启动配置文件监控
-        directoryWatcher.start("/home/lifangxing/pig-spark-streaming/config")
+//        directoryWatcher.start("/home/lifangxing/pig-spark-streaming/config")
         // 启动数据库后台进程
-        db_daemon.start()
+//        db_daemon.start()
         
         println("topics:" + topicMap)
         // 3 kafka partition at least, every DStream map to one Kafka partition
